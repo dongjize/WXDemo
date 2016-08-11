@@ -50,7 +50,6 @@ public class WXPageActivity extends WXBaseActivity implements IWXRenderListener,
     private Handler mWXHandler;
     private BroadcastReceiver mReceiver;
 
-    private String url = "http://" + Constants.IP + ":8081/js/component/list/list-basic.js";
     private Uri mUri;
     private ViewGroup mContainer;
     private ProgressBar mProgressBar;
@@ -63,7 +62,7 @@ public class WXPageActivity extends WXBaseActivity implements IWXRenderListener,
         setCurrentWxPageActivity(this);
         WXSDKEngine.setActivityNavBarSetter(new NavigatorAdapter());
 
-        mUri = Uri.parse(url);
+        mUri = Uri.parse(Constants.BASIC_URL);
 
         if (mUri == null) {
             Toast.makeText(this, "the uri is empty!", Toast.LENGTH_SHORT).show();
@@ -114,7 +113,6 @@ public class WXPageActivity extends WXBaseActivity implements IWXRenderListener,
             @Override
             public void onSuccess(WXHttpTask task) {
                 Log.e(TAG, "into--[http:onSuccess] url:" + url);
-//                Log.e("aaaa", task.response.data);
                 mInstance.render(TAG, task.response.data, null, null, ScreenUtil.getDisplayWidth(WXPageActivity.this),
                         ScreenUtil.getDisplayHeight(WXPageActivity.this), WXRenderStrategy.APPEND_ASYNC);
             }

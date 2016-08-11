@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 
 /**
  * Description:
- * <p>
+ * <p/>
  * Author: dong
  * Date: 16/8/8
  */
@@ -24,6 +24,12 @@ public class ScreenUtil {
         isSupportSmartBar = isSupportSmartBar();
     }
 
+    /**
+     * 获取屏幕宽度
+     *
+     * @param activity
+     * @return 宽度像素值
+     */
     public static int getDisplayWidth(AppCompatActivity activity) {
         int width = 0;
         if (activity != null && activity.getWindowManager() != null &&
@@ -35,6 +41,12 @@ public class ScreenUtil {
         return width;
     }
 
+    /**
+     * 获取屏幕高度
+     *
+     * @param activity
+     * @return 高度像素值
+     */
     public static int getDisplayHeight(AppCompatActivity activity) {
         int height = 0;
         if (activity != null && activity.getWindowManager() != null && activity.getWindowManager().getDefaultDisplay() != null) {
@@ -70,6 +82,12 @@ public class ScreenUtil {
         return height;
     }
 
+    /**
+     * 获取状态栏高度
+     *
+     * @param activity
+     * @return 状态栏高度像素值
+     */
     private static int getStatusBarHeight(AppCompatActivity activity) {
         Class<?> c;
         Object obj;
@@ -88,6 +106,11 @@ public class ScreenUtil {
         return statusBarHeight;
     }
 
+    /**
+     *
+     * @param activity
+     * @return
+     */
     private static int getSmartBarHeight(AppCompatActivity activity) {
         ActionBar actionBar = activity.getSupportActionBar();
         if (actionBar != null) {
