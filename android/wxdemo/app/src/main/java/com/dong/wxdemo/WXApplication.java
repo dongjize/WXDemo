@@ -2,11 +2,11 @@ package com.dong.wxdemo;
 
 import android.app.Application;
 
-import com.dong.wxdemo.component.MyViewComponent;
-import com.dong.wxdemo.component.RichTextComponent;
-import com.dong.wxdemo.module.MyModule;
-import com.dong.wxdemo.module.RenderModule;
-import com.dong.wxdemo.module.WXEventModule;
+import com.dong.wxdemo.extend.component.MyViewComponent;
+import com.dong.wxdemo.extend.component.RichText;
+import com.dong.wxdemo.extend.module.MyModule;
+import com.dong.wxdemo.extend.module.RenderModule;
+import com.dong.wxdemo.extend.module.WXEventModule;
 import com.taobao.weex.InitConfig;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.common.WXException;
@@ -32,7 +32,7 @@ public class WXApplication extends Application {
             WXSDKEngine.registerModule("MyModule", MyModule.class);
 
             WXSDKEngine.registerComponent("MyView", MyViewComponent.class);
-            WXSDKEngine.registerComponent("RichText", RichTextComponent.class);
+            WXSDKEngine.registerComponent("RichText", RichText.class);
         } catch (WXException e) {
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package com.dong.wxdemo.module;
+package com.dong.wxdemo.extend.module;
 
 import com.taobao.weex.common.WXModule;
 

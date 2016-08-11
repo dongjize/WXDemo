@@ -1,4 +1,4 @@
-package com.dong.wxdemo.component;
+package com.dong.wxdemo.extend.component;
 
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -18,9 +18,9 @@ import com.taobao.weex.ui.component.WXVContainer;
  * Author: dong
  * Date: 16/8/5
  */
-public class RichTextComponent extends WXComponent {
+public class RichText extends WXComponent {
 
-    public RichTextComponent(WXSDKInstance instance, WXDomObject dom, WXVContainer parent, boolean isLazy) {
+    public RichText(WXSDKInstance instance, WXDomObject dom, WXVContainer parent, boolean isLazy) {
         super(instance, dom, parent, isLazy);
     }
 

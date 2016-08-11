@@ -1,4 +1,4 @@
-package com.dong.wxdemo.component;
+package com.dong.wxdemo.extend.component;
 
 import android.view.View;
 import android.widget.TextView;

@@ -77,8 +77,9 @@ public class WXPageActivity extends WXBaseActivity implements IWXRenderListener,
 
         if (TextUtils.equals("http", mUri.getScheme()) || TextUtils.equals("https", mUri.getScheme())) {
             //      if url has key "_wx_tpl" then get weex bundle js
-            String weexTpl = mUri.getQueryParameter(Constants.WEEX_TPL_KEY);
-            String url = TextUtils.isEmpty(weexTpl) ? mUri.toString() : weexTpl;
+//            String weexTpl = mUri.getQueryParameter(Constants.WEEX_TPL_KEY);
+//            String url = TextUtils.isEmpty(weexTpl) ? mUri.toString() : weexTpl;
+            String url = mUri.toString();
             loadWXFromService(url);
 //            startHotRefresh();
         } else {
