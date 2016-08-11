@@ -8,5 +8,5 @@ package com.dong.wxdemo.http;
  */
 public class WXHttpResponse {
     public int code;
-    public byte[] data;
+    public String data;
 }

@@ -71,7 +71,7 @@ public class WXOkHttpDispatcher {
                     try {
                         Response response = mOkHttpClient.newCall(builder.build()).execute();
                         httpResponse.code = response.code();
-                        httpResponse.data = response.body().bytes();
+                        httpResponse.data = response.body().string();
                         task.response = httpResponse;
                         mUiHandler.sendMessage(mUiHandler.obtainMessage(1, task));
                     } catch (IOException e) {
